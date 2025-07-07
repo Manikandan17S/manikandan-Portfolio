@@ -69,11 +69,11 @@ I'm Manikandan S (Scott) — an aspiring AI Developer, Full Stack Engineer, and 
 I blend logic, creativity, and code to craft modern solutions that inspire.
 
 🔗 Connect With Me
-GitHub: @Manikandan17S
+GitHub: https://github.com/Manikandan17S
 
-LinkedIn: Your LinkedIn
+LinkedIn: https://www.linkedin.com/in/manikandan1406/
 
-Instagram: @YourHandle
+Instagram: https://www.instagram.com/manikandan_anime_lover
 
 Portfolio:https://manikandan-portfolio-omega.vercel.app/
 
