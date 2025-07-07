@@ -7,7 +7,7 @@ A futuristic animated portfolio showcasing my skills, projects, and passion for 
 
 ## 🌐 Live Site
 
-🔗 [Visit Live Website](https://manikandan-portfolio.vercel.app)
+🔗 [Visit Live Website](https://manikandan-portfolio-omega.vercel.app/)
 
 ---
 
