@@ -65,7 +65,7 @@ npm install
 npm run dev
 
 🧠 About Me
-I'm Manikandan S (Scott) — an aspiring AI Developer, Full Stack Engineer, and Prompt Engineer with a passion for creating futuristic interfaces, intelligent applications, and visually stunning experiences.
+I'm Manikandan S — an aspiring AI Developer, Full Stack Engineer, and Prompt Engineer with a passion for creating futuristic interfaces, intelligent applications, and visually stunning experiences.
 I blend logic, creativity, and code to craft modern solutions that inspire.
 
 🔗 Connect With Me
