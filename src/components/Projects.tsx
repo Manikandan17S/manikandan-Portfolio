@@ -43,7 +43,7 @@ const Projects: React.FC = () => {
       icon: <Eye className="w-8 h-8" />,
       gradient: 'from-orange-500 to-red-500',
       link: '#',
-      github: '#',
+      github: 'https://github.com/Manikandan17S/Manikandan17S-FaceML-Emotion-Detection',
     },
   ];
 
