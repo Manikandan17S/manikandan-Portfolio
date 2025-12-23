@@ -55,8 +55,36 @@ const About: React.FC = () => {
               About Me
             </span>
           </h2>
+
+          {/* ✅ ONLY THIS TEXT IS UPDATED */}
           <p className="text-xl text-gray-400 max-w-3xl mx-auto font-rajdhani font-light">
-            Aspiring Artificial Intelligence and Data Science professional with expertise in Python, SQL, and Machine Learning. I'm a passionate Full Stack Developer, AI Developer, and Prompt Engineer who loves building intelligent, interactive web experiences. I also explore creative storytelling through video editing and 3D animation. I strive to turn technology into meaningful, innovative solutions that inspire and perform.
+            I am an{' '}
+            <span className="text-cyan-400 font-semibold">AI & ML Engineer</span> with a strong
+            foundation in{' '}
+            <span className="text-blue-400">Data Science</span>,{' '}
+            <span className="text-purple-400">Machine Learning</span>,{' '}
+            <span className="text-cyan-400">Computer Vision</span>, and{' '}
+            <span className="text-blue-400">Generative AI</span>. Currently working as an{' '}
+            <span className="text-cyan-400 font-semibold">AI & ML Trainer</span> at{' '}
+            <span className="text-purple-400">BigLearn IT</span>, I focus on simplifying complex AI
+            concepts and guiding others to build real-world intelligent systems. I have hands-on
+            experience developing{' '}
+            <span className="text-cyan-400">offline AI assistants</span>,{' '}
+            <span className="text-blue-400">automation tools</span>, and{' '}
+            <span className="text-purple-400">vision-based applications</span> with a strong emphasis
+            on{' '}
+            <span className="text-cyan-400">privacy</span> and{' '}
+            <span className="text-blue-400">practicality</span>. My core strength lies in{' '}
+            <span className="text-purple-400">AI logic</span>,{' '}
+            <span className="text-cyan-400">model training</span>, and{' '}
+            <span className="text-blue-400">data engineering</span>, supported by{' '}
+            <span className="text-purple-400">AI-assisted development</span> and{' '}
+            <span className="text-cyan-400">prompt engineering</span> for rapid prototyping. I am
+            passionate about making AI{' '}
+            <span className="text-blue-400">accessible</span>,{' '}
+            <span className="text-purple-400">explainable</span>, and{' '}
+            <span className="text-cyan-400">impactful</span> through building, teaching, and
+            mentoring.
           </p>
         </motion.div>
 
@@ -82,11 +110,17 @@ const About: React.FC = () => {
                     </div>
                     <div>
                       <div className="flex items-center space-x-2 mb-1">
-                        <span className="text-sm font-bold text-blue-300 font-rajdhani">{item.year}</span>
+                        <span className="text-sm font-bold text-blue-300 font-rajdhani">
+                          {item.year}
+                        </span>
                         <div className="h-px bg-gradient-to-r from-blue-400 to-transparent flex-1"></div>
                       </div>
-                      <h4 className="text-lg font-semibold text-white mb-2 font-exo">{item.title}</h4>
-                      <p className="text-gray-400 font-rajdhani">{item.description}</p>
+                      <h4 className="text-lg font-semibold text-white mb-2 font-exo">
+                        {item.title}
+                      </h4>
+                      <p className="text-gray-400 font-rajdhani">
+                        {item.description}
+                      </p>
                     </div>
                   </motion.div>
                 ))}
@@ -112,12 +146,16 @@ const About: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Zap className="w-8 h-8 text-yellow-400" />
-                  <span className="text-lg font-rajdhani">Future Vision: Creating anime stories in Blender</span>
+                  <span className="text-lg font-rajdhani">
+                    Future Vision: Creating anime stories in Blender
+                  </span>
                 </div>
               </div>
 
               <div className="mt-8">
-                <h4 className="text-xl font-semibold mb-4 text-purple-300 font-exo">Key Strengths</h4>
+                <h4 className="text-xl font-semibold mb-4 text-purple-300 font-exo">
+                  Key Strengths
+                </h4>
                 <div className="grid grid-cols-2 gap-3">
                   {skills.map((skill, index) => (
                     <motion.div

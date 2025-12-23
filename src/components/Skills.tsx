@@ -2,17 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { 
-  Code, 
-  Database, 
-  Smartphone, 
-  Cloud, 
-  Brain, 
+import {
+  Code,
+  Database,
+  Brain,
   Palette,
   Heart,
   Users,
   Zap,
-  Target
+  Target,
+  Eye,
+  Mic,
 } from 'lucide-react';
 
 const Skills: React.FC = () => {
@@ -20,19 +20,69 @@ const Skills: React.FC = () => {
   const isInView = useInView(ref, { once: true });
 
   const technicalSkills = [
-    { name: 'Frontend Development', level: 90, icon: <Code className="w-6 h-6" />, color: 'from-blue-400 to-cyan-400' },
-    { name: 'Backend Development', level: 85, icon: <Database className="w-6 h-6" />, color: 'from-green-400 to-emerald-400' },
-    { name: 'Mobile Development', level: 75, icon: <Smartphone className="w-6 h-6" />, color: 'from-purple-400 to-pink-400' },
-    { name: 'Cloud & DevOps', level: 80, icon: <Cloud className="w-6 h-6" />, color: 'from-orange-400 to-red-400' },
-    { name: 'AI & Machine Learning', level: 88, icon: <Brain className="w-6 h-6" />, color: 'from-violet-400 to-indigo-400' },
-    { name: 'UI/UX Design', level: 82, icon: <Palette className="w-6 h-6" />, color: 'from-pink-400 to-rose-400' },
+    {
+      name: 'Artificial Intelligence & Machine Learning',
+      level: 88,
+      icon: <Brain className="w-6 h-6" />,
+      color: 'from-violet-400 to-indigo-400',
+    },
+    {
+      name: 'Data Science & Data Analysis',
+      level: 90,
+      icon: <Database className="w-6 h-6" />,
+      color: 'from-blue-400 to-cyan-400',
+    },
+    {
+      name: 'Computer Vision (OpenCV)',
+      level: 85,
+      icon: <Eye className="w-6 h-6" />,
+      color: 'from-purple-400 to-pink-400',
+    },
+    {
+      name: 'Generative AI & Prompt Engineering',
+      level: 80,
+      icon: <Zap className="w-6 h-6" />,
+      color: 'from-green-400 to-emerald-400',
+    },
+    {
+      name: 'AI Automation & Assistants',
+      level: 82,
+      icon: <Mic className="w-6 h-6" />,
+      color: 'from-orange-400 to-red-400',
+    },
+    {
+      name: 'AI APIs & Interfaces (Flask, React)',
+      level: 70,
+      icon: <Code className="w-6 h-6" />,
+      color: 'from-pink-400 to-rose-400',
+    },
   ];
 
   const softSkills = [
-    { name: 'Problem Solving', level: 95, icon: <Target className="w-6 h-6" />, color: 'from-cyan-400 to-blue-400' },
-    { name: 'Teamwork', level: 90, icon: <Users className="w-6 h-6" />, color: 'from-green-400 to-teal-400' },
-    { name: 'Adaptability', level: 92, icon: <Zap className="w-6 h-6" />, color: 'from-yellow-400 to-orange-400' },
-    { name: 'Creativity', level: 88, icon: <Heart className="w-6 h-6" />, color: 'from-pink-400 to-purple-400' },
+    {
+      name: 'Problem Solving',
+      level: 95,
+      icon: <Target className="w-6 h-6" />,
+      color: 'from-cyan-400 to-blue-400',
+    },
+    {
+      name: 'Teaching & Mentoring',
+      level: 92,
+      icon: <Users className="w-6 h-6" />,
+      color: 'from-green-400 to-teal-400',
+    },
+    {
+      name: 'Adaptability',
+      level: 90,
+      icon: <Zap className="w-6 h-6" />,
+      color: 'from-yellow-400 to-orange-400',
+    },
+    {
+      name: 'Creativity & Innovation',
+      level: 88,
+      icon: <Heart className="w-6 h-6" />,
+      color: 'from-pink-400 to-purple-400',
+    },
   ];
 
   return (
@@ -51,7 +101,8 @@ const Skills: React.FC = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto font-rajdhani font-light">
-            A comprehensive skill set spanning technical expertise and essential soft skills.
+            A focused skill set centered around Artificial Intelligence, Data Science, and
+            real-world problem solving.
           </p>
         </motion.div>
 
@@ -77,20 +128,28 @@ const Skills: React.FC = () => {
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
-                        <div className={`bg-gradient-to-r ${skill.color} p-2 rounded-full`}>
+                        <div
+                          className={`bg-gradient-to-r ${skill.color} p-2 rounded-full`}
+                        >
                           {skill.icon}
                         </div>
-                        <span className="text-white font-medium font-rajdhani">{skill.name}</span>
+                        <span className="text-white font-medium font-rajdhani">
+                          {skill.name}
+                        </span>
                       </div>
-                      <span className="text-gray-400 text-sm font-rajdhani">{skill.level}%</span>
+                      <span className="text-gray-400 text-sm font-rajdhani">
+                        {skill.level}%
+                      </span>
                     </div>
                     <div className="w-full bg-gray-700 rounded-full h-2">
                       <motion.div
                         initial={{ width: 0 }}
-                        animate={isInView ? { width: `${skill.level}%` } : { width: 0 }}
+                        animate={
+                          isInView ? { width: `${skill.level}%` } : { width: 0 }
+                        }
                         transition={{ duration: 1, delay: 0.6 + index * 0.1 }}
                         className={`h-2 rounded-full bg-gradient-to-r ${skill.color}`}
-                        style={{ 
+                        style={{
                           boxShadow: `0 0 10px rgba(59, 130, 246, 0.5)`,
                         }}
                       />
@@ -116,20 +175,33 @@ const Skills: React.FC = () => {
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, scale: 0.8 }}
-                    animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                    animate={
+                      isInView
+                        ? { opacity: 1, scale: 1 }
+                        : { opacity: 0, scale: 0.8 }
+                    }
                     transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
                     whileHover={{ scale: 1.05 }}
                     className="glass rounded-xl p-6 text-center relative overflow-hidden group"
                   >
-                    <div className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-10 group-hover:opacity-20 transition-opacity duration-300`}></div>
-                    
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-10 group-hover:opacity-20 transition-opacity duration-300`}
+                    ></div>
+
                     <div className="relative z-10">
-                      <div className={`bg-gradient-to-r ${skill.color} p-3 rounded-full w-fit mx-auto mb-4`}>
+                      <div
+                        className={`bg-gradient-to-r ${skill.color} p-3 rounded-full w-fit mx-auto mb-4`}
+                      >
                         {skill.icon}
                       </div>
-                      <h4 className="text-white font-semibold mb-2 font-exo">{skill.name}</h4>
+                      <h4 className="text-white font-semibold mb-2 font-exo">
+                        {skill.name}
+                      </h4>
                       <div className="relative w-16 h-16 mx-auto">
-                        <svg className="w-16 h-16 transform -rotate-90" viewBox="0 0 32 32">
+                        <svg
+                          className="w-16 h-16 transform -rotate-90"
+                          viewBox="0 0 32 32"
+                        >
                           <circle
                             cx="16"
                             cy="16"
@@ -148,21 +220,42 @@ const Skills: React.FC = () => {
                             fill="none"
                             strokeLinecap="round"
                             strokeDasharray={`${2 * Math.PI * 12}`}
-                            initial={{ strokeDashoffset: 2 * Math.PI * 12 }}
-                            animate={isInView ? { 
-                              strokeDashoffset: 2 * Math.PI * 12 * (1 - skill.level / 100) 
-                            } : { strokeDashoffset: 2 * Math.PI * 12 }}
-                            transition={{ duration: 1, delay: 0.8 + index * 0.1 }}
+                            initial={{
+                              strokeDashoffset: 2 * Math.PI * 12,
+                            }}
+                            animate={
+                              isInView
+                                ? {
+                                    strokeDashoffset:
+                                      2 *
+                                      Math.PI *
+                                      12 *
+                                      (1 - skill.level / 100),
+                                  }
+                                : { strokeDashoffset: 2 * Math.PI * 12 }
+                            }
+                            transition={{
+                              duration: 1,
+                              delay: 0.8 + index * 0.1,
+                            }}
                           />
                           <defs>
-                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <linearGradient
+                              id="gradient"
+                              x1="0%"
+                              y1="0%"
+                              x2="100%"
+                              y2="100%"
+                            >
                               <stop offset="0%" stopColor="#3b82f6" />
                               <stop offset="100%" stopColor="#8b5cf6" />
                             </linearGradient>
                           </defs>
                         </svg>
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <span className="text-sm font-bold text-white font-rajdhani">{skill.level}%</span>
+                          <span className="text-sm font-bold text-white font-rajdhani">
+                            {skill.level}%
+                          </span>
                         </div>
                       </div>
                     </div>

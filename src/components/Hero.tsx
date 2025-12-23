@@ -4,7 +4,7 @@ import { ChevronDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const [currentRole, setCurrentRole] = useState(0);
-  const roles = ['Full Stack Developer', 'AI Enthusiast', 'Animator', 'Video Editor', 'Creative Technologist', 'Prompt Engineer', 'Storyteller', 'Tech Innovator'];
+  const roles = ['AI & ML Engineer', 'GenAI Enthusiast','AI Trainer','Prompt Engineer','Computer Vision Developer','AI Automation Builder', 'Animator', 'Video Editor', 'Creative Technologist', 'Storyteller', 'Tech Innovator'];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 px-4 font-rajdhani font-light"
         >
-         Aspiring AI and Full Stack Developer blending technical expertise with creativity, building smart solutions and futuristic experiences through code, prompts, and visual storytelling.
+         Building intelligent systems that solve real-world problems. Specializing in offline AI assistants, computer vision, and automation solutions that put privacy and practicality first.
         </motion.p>
 
         <motion.div
